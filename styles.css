@@ -1,0 +1,144 @@
+body {
+    font-family: 'Kanit', sans-serif; /* Promijenjen font */
+    background: url('texture.jpg') no-repeat center center fixed; /* Tekstura pozadine */
+    background-size: cover; /* Povećava pozadinsku sliku da pokrije cijeli ekran */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Spriječava horizontalno pomicanje */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Poluprozirna crna pozadina */
+    color: white;
+    text-align: center;
+    padding: 2.5em 0; /* Povećano padding */
+    animation: fadeIn 1s; /* Animacija ulaska */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5em; /* Veći font */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Crveni glow efekt na naslovu */
+}
+
+header p {
+    font-size: 1.8em; /* Veći font */
+    margin-top: 0.5em;
+    color: #ff0000; /* Crvena boja */
+}
+
+nav {
+    background-color: #333;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* Animacija promjene boje */
+}
+
+nav ul li a:hover {
+    color: #ff0000; /* Crvena boja */
+}
+
+.section {
+    padding: 2.5em; /* Povećano padding */
+    text-align: center;
+    border-bottom: 1px solid #ccc; /* Linija između sekcija */
+    animation: slideIn 0.5s; /* Animacija ulaska za sekcije */
+    background-color: rgba(255, 255, 255, 0.8); /* Poluprozirna pozadina za sekcije */
+}
+
+.section h2 {
+    color: #333;
+    margin-bottom: 1em;
+    font-size: 2.5em; /* Veći font za podnaslove */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Bijela senka na podnaslovima */
+}
+
+.project {
+    margin-bottom: 1.5em;
+}
+
+.project a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 300px; /* Promijeni veličinu slika prema potrebama */
+    border-radius: 8px; /* Zaobljeni rubovi slika */
+    transition: transform 0.2s; /* Animacija promjene veličine */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Efekt pri hoveru */
+}
+
+footer {
+    text-align: center;
+    padding: 2em 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Poluprozirna crna pozadina za footer */
+    color: white;
+}
+
+/* Animacije */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px); /* Pomakni dolje */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Efekt klizanja prilikom pomicanja prema dolje */
+@keyframes fadeInSlide {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Primjena animacije na sve sekcije */
+.section {
+    animation: fadeInSlide 0.5s forwards; /* Animacija klizanja i nestajanja */
+}
+
